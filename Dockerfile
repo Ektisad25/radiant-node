@@ -71,7 +71,7 @@ WORKDIR /root
 RUN git clone --depth 1 --branch v1.2.0 https://github.com/radiantblockchain/radiant-node.git
 RUN mkdir /root/radiant-node/build
 WORKDIR /root/radiant-node/build
-RUN cmake -GNinja .. -DBUILD_RADIANT_QT=OFF
+RUN cmake -GNinja .. 
 RUN ninja
 RUN ninja install
 
